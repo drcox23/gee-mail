@@ -1,4 +1,10 @@
-body {font family: Karla}
+body {
+  background: rgb(255, 255, 255):
+  font family: Karla, Arial, sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  line-height: 1.8em;
+ }
 
 
 td, th{ border: 1px solid #cccccc; }
