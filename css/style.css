@@ -1,0 +1,6 @@
+body {font family: Karla}
+
+
+td, th{ border: 1px solid #cccccc; }
+tr:nth-child(odd) td{ background-color: #ccc; }
+
