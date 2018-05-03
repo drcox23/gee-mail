@@ -21,7 +21,7 @@
 			var senderElem = document.createElement('div');
 			senderElem.className = "daSender";
 			senderElem.innerHTML = window.geemails[i].sender;
-			document.body.appendChild(senderElem);
+			dateElem.appendChild(senderElem);
 
 		}
 
@@ -29,7 +29,7 @@
 			var subjElem = document.createElement('div');
 			subjElem.className = "daSubj";
 			subjElem.innerHTML = window.geemails[i].subject;
-			document.body.appendChild(subjElem);
+			senderElem.appendChild(subjElem);
 		}
 
 		for (var i = 0; i < window.geemails.length; i++){
