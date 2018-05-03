@@ -6,31 +6,38 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
 				// We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-				
-				console.log('Aloha');
-				
-				for (var i = 0; i < window.geemails.length; i++){
+		
+		console.log('Aloha');
+		
+		for (var i = 0; i < window.geemails.length; i++){
 
-					var dateElem = document.createElement('div');
-					dateElem.className = "daDate";
-					dateElem.innerHTML = window.geemails[i].date;
-					document.body.appendChild(dateElem);
-				}
+			var dateElem = document.createElement('div');
+			dateElem.className = "daDate";
+			dateElem.innerHTML = window.geemails[i].date;
+			document.body.appendChild(dateElem);
+		}
 
-				for (var i = 0; i < window.geemails.length; i++){
-					var senderElem = document.createElement('div');
-					senderElem.className = "daSender";
-					senderElem.innerHTML = window.geemails[i].sender;
-					document.body.appendChild(senderElem);
+		for (var i = 0; i < window.geemails.length; i++){
+			var senderElem = document.createElement('div');
+			senderElem.className = "daSender";
+			senderElem.innerHTML = window.geemails[i].sender;
+			document.body.appendChild(senderElem);
 
-				}
+		}
 
-				for (var i = 0; i < window.geemails.length; i++){
-					var subjElem = document.createElement('div');
-					subjElem.className = "daSubj";
-					subjElem.innerHTML = window.geemails[i].subject;
-					document.body.appendChild(subjElem);
-				}
+		for (var i = 0; i < window.geemails.length; i++){
+			var subjElem = document.createElement('div');
+			subjElem.className = "daSubj";
+			subjElem.innerHTML = window.geemails[i].subject;
+			document.body.appendChild(subjElem);
+		}
+
+		for (var i = 0; i < window.geemails.length; i++){
+			var mailElem = document.createElement('div');
+			mailElem.className = "daBody";
+			mailElem.innerHTML = window.geemails[i].body;
+			subjElem.appendChild(mailElem);
+		}
 
 
       };
