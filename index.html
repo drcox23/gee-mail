@@ -39,6 +39,21 @@
 			subjElem.appendChild(mailElem);
 		}
 
+		var getMail = document.getElementsByClassName('daSubj')
+
+		for (var i = 0; i<getMail.length; i++){
+			getMail[i].addEventListener ('click', showMail);
+		}
+
+		function showMail(){
+			console.log('Aloha again');
+			var bodyElem = this.querySelectorAll('.daBody')[0];
+			if (bodyElem.style.display === 'block'){
+				bodyElem.style.display = 'none';
+			}else{
+				bodyElem.style.display = 'block';
+			}
+		}
 
       };
     </script>
