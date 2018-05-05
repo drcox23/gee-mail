@@ -15,55 +15,54 @@
 			dateElem.className = "daDate";
 			dateElem.innerHTML = window.geemails[i].date;
 			document.body.appendChild(dateElem);
-		}
-
-		for (var i = 0; i < window.geemails.length; i++){
+	
+		
 			var senderElem = document.createElement('div');
 			senderElem.className = "daSender";
 			senderElem.innerHTML = window.geemails[i].sender;
 			dateElem.appendChild(senderElem);
 
-		}
 
-		for (var i = 0; i < window.geemails.length; i++){
 			var subjElem = document.createElement('div');
 			subjElem.className = "daSubj";
 			subjElem.innerHTML = window.geemails[i].subject;
 			senderElem.appendChild(subjElem);
-		}
+		
 
-		for (var i = 0; i < window.geemails.length; i++){
 			var mailElem = document.createElement('div');
 			mailElem.className = "daBody";
 			mailElem.innerHTML = window.geemails[i].body;
 			subjElem.appendChild(mailElem);
 		}
 
-		var getMail = document.getElementsByClassName('daSubj')
+		var getMail = document.getElementsByClassName('daSubj');
 
 		for (var i = 0; i<getMail.length; i++){
-			getMail[i].addEventListener ('click', showMail);
+			getMail[i].addEventListener('click', showMail);
 		}
 
 		function showMail(){
-			console.log('Aloha again');
-			var bodyElem = this.querySelectorAll('.daBody')[0];
-			if (bodyElem.style.display === 'block'){
-				bodyElem.style.display = 'none';
+			// console.log(this.innerHTML);
+			var emCont = this.querySelectorAll('.daBody')[0];
+			if (emCont.style.display === 'block'){
+				emCont.style.display = 'none';
 			}else{
-				bodyElem.style.display = 'block';
+				emCont.style.display = 'block';
 			}
 		}
 
       };
-    </script>
+	</script>
 	</head>
+
 	<body>
 		<header class="container">
 			<h1> Welcome to Gee-Mail!</h1>
 		</header>
 			<p> Access your electronic mail below!</p>
-		<table>
+
+		<div></div>
+		<table class="gTable">
 			<thead>
 				<tr>
 					<th>Date</th>
@@ -72,5 +71,7 @@
 				</tr>
 			</thead>
 		</table> 
+
+		<script src="js/mail-generator.js"></script>
 	</body>
 </html>
