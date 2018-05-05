@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
@@ -9,23 +10,25 @@
 		
 		console.log('Aloha');
 		
-		for (var i = 0; i < window.geemails.length; i++){
+
+		function getGeeMail(allMail){	
+		for (var i = 0; i < allMail.length; i++){
 
 			var dateElem = document.createElement('div');
 			dateElem.className = "daDate";
-			dateElem.innerHTML = window.geemails[i].date;
+			dateElem.innerHTML = allMail[i].date;
 			document.body.appendChild(dateElem);
 	
 		
 			var senderElem = document.createElement('div');
 			senderElem.className = "daSender";
-			senderElem.innerHTML = window.geemails[i].sender;
+			senderElem.innerHTML = allMail[i].sender;
 			dateElem.appendChild(senderElem);
 
 
 			var subjElem = document.createElement('div');
 			subjElem.className = "daSubj";
-			subjElem.innerHTML = window.geemails[i].subject;
+			subjElem.innerHTML = allMail[i].subject;
 			senderElem.appendChild(subjElem);
 		
 
@@ -34,6 +37,8 @@
 			mailElem.innerHTML = window.geemails[i].body;
 			subjElem.appendChild(mailElem);
 		}
+	}
+		getGeeMail(window.geemails);
 
 		var getMail = document.getElementsByClassName('daSubj');
 
@@ -50,8 +55,44 @@
 				emCont.style.display = 'block';
 			}
 		}
+// helper function 
+		function buildElem (elem, label, bodyContent){
+			var box = document.createElement(elem);
+			box.className = label;
+			box.innerHTML = bodyContent;
 
-      };
+			return box;
+		}
+
+		var daNewMessages = setInterval(allNew, 5000);
+
+		function allNew(){
+			var allNew = getNewMessage();
+
+			var newDate = buildElem ('div', 'daDate', allNew.date);
+			document.body.appendChild(newDate);
+	
+		
+			var newSender = buildElem ('div', 'daSender', allNew.sender);
+			newDate.appendChild(newSender);
+
+
+			var newSubject = buildElem ('div', 'daSubj', allNew.subject);
+			newSender.appendChild(newSubject);
+		
+
+			var newBody = buildElem ('div', 'daBody', allNew.body);
+			newSubject.appendChild(newBody);
+
+			newSubject.addEventListener('click', showMail);
+
+
+		}
+
+
+	}
+		
+
 	</script>
 	</head>
 
