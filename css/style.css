@@ -11,20 +11,48 @@ h1 {
   color: #ffffff;
 }
 
+.daDate::before {
+  content: 'Date: ';
+  font-weight: bold;
 
+}
+
+.daSender::before{
+  content: 'Sender: ';
+  font-weight: bold;
+}
+
+.daSubj::before {
+  content: 'Subject: ';
+  font-weight: bold;
+  
+}
+
+
+.daDate {
+  padding-top: 10px;
+}
+
+
+.daSender {
+  text-align: left;
+  padding: 0;
+}
+
+.daSubj {
+  border: 1px solid white;
+  
+}
 
 .daBody {
   display: none;
 }
 
-.daDate, .daSender, .daSubj, .daBody{
-  display: inline-block
 
-}
+.daDate, .daSender {
+  display: inline-block;
+  padding-right: 10px;
 
-td, th{ 
-  border: 1px solid #cccccc;
+ 
 }
-tr:nth-child(odd) td{ 
-  background-color: #ccc; }
 

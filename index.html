@@ -23,13 +23,13 @@
 			var senderElem = document.createElement('div');
 			senderElem.className = "daSender";
 			senderElem.innerHTML = allMail[i].sender;
-			dateElem.appendChild(senderElem);
+			document.body.appendChild(senderElem);
 
 
 			var subjElem = document.createElement('div');
 			subjElem.className = "daSubj";
 			subjElem.innerHTML = allMail[i].subject;
-			senderElem.appendChild(subjElem);
+			document.body.appendChild(subjElem);
 		
 
 			var mailElem = document.createElement('div');
@@ -74,15 +74,16 @@
 	
 		
 			var newSender = buildElem ('div', 'daSender', allNew.sender);
-			newDate.appendChild(newSender);
+			document.body.appendChild(newSender);
 
 
 			var newSubject = buildElem ('div', 'daSubj', allNew.subject);
-			newSender.appendChild(newSubject);
+			document.body.appendChild(newSubject);
 		
 
 			var newBody = buildElem ('div', 'daBody', allNew.body);
 			newSubject.appendChild(newBody);
+
 
 			newSubject.addEventListener('click', showMail);
 
@@ -103,15 +104,8 @@
 			<p> Access your electronic mail below!</p>
 
 		<div></div>
-		<table class="gTable">
-			<thead>
-				<tr>
-					<th>Date</th>
-					<th>Sender</th>
-					<th>Subject</th>
-				</tr>
-			</thead>
-		</table> 
+		
+		
 
 		<script src="js/mail-generator.js"></script>
 	</body>
