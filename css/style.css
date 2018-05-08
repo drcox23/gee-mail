@@ -30,28 +30,32 @@ h1 {
 
 
 .daDate {
-  padding-top: 10px;
+  padding-top: ;
 }
 
 
 .daSender {
   text-align: left;
   padding: 0;
+  float: left;
 }
 
 .daSubj {
   border: 1px solid white;
+  cursor: pointer;
   
 }
 
 .daBody {
   display: none;
+  
 }
 
 
 .daDate, .daSender {
   display: inline-block;
   padding-right: 10px;
+  padding-top: 30px;
 
  
 }
