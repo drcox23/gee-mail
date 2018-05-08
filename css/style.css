@@ -1,20 +1,30 @@
 body {
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/11/Download-Free-Deep-Ocean-Background.jpg");
   background-color: rgb(31, 23, 102);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   color: #ffffff;
-  font-family: Karla, Arial, sans-serif;
-  font-size: 1em;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 20px; 
   font-style: normal;
   line-height: 1.8em;
  }
 
 h1 {
-  color: #ffffff;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 60px;
+  text-align: center;
+}
+
+.par{
+  text-align: center;
+  font-size: 40px;
 }
 
 .daDate::before {
-  content: 'Date: ';
+  content: 'When: ';
   font-weight: bold;
-
 }
 
 .daSender::before{
@@ -25,12 +35,11 @@ h1 {
 .daSubj::before {
   content: 'Subject: ';
   font-weight: bold;
-  
 }
 
-
-.daDate {
-  padding-top: ;
+.daBody::before {
+  content: 'Message: ';
+  font-weight: bold;
 }
 
 
@@ -41,22 +50,19 @@ h1 {
 }
 
 .daSubj {
-  border: 1px solid white;
   cursor: pointer;
+  border-bottom: 1px solid white;
   
 }
 
 .daBody {
   display: none;
-  
 }
 
 
-.daDate, .daSender {
+.daDate, .daSender  {
   display: inline-block;
   padding-right: 10px;
-  padding-top: 30px;
-
- 
+  margin-top: 30px;
 }
 
