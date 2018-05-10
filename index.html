@@ -11,6 +11,21 @@
 		
 		console.log('Aloha');
 		
+	// creating a counter
+
+		var count = window.geemails.length;
+
+		function mailCount(total){
+			for (var i=0; i<total.length; i++);
+			return total;
+		}
+
+		var showTheCount = (mailCount("Total messages: "+ count));
+
+		var showCounter = document.createElement('div');
+		showCounter.className = "daCounts";
+		showCounter.innerHTML = showTheCount;
+		document.body.appendChild(showCounter);
 
 		function getGeeMail(allMail){	
 		for (var i = 0; i < allMail.length; i++){
@@ -65,6 +80,7 @@
 			return box;
 		}
 
+// New Messages function
 		var daNewMessages = setInterval(allNew, 5000);
 
 		function allNew(){
@@ -88,6 +104,9 @@
 
 			newSubject.addEventListener('click', showMail);
 
+// increment counter
+			var moreMail = count++;
+			showCounter.innerHTML = "Total messages: "+ (moreMail+1);
 
 		}
 

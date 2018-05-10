@@ -17,6 +17,12 @@ h1 {
   text-align: center;
 }
 
+.daCounts {
+  font-size: 30px;
+  border: 1px solid white;
+  width: 250px;
+}
+
 .par{
   text-align: center;
   font-size: 40px;
